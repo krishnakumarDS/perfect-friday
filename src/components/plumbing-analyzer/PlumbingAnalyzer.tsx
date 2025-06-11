@@ -2,13 +2,13 @@
 import { useLiveAPIContext } from "../../contexts/LiveAPIContext";
 import { Message } from "../../types/plumbing-types";
 // import classNames from "classnames";
-import { ServerContent, LiveConfig } from "../../multimodal-live-types";
+import { ServerContent } from "../../multimodal-live-types";
 import type { Part } from "@google/generative-ai";
 import "./plumbing-analyzer.scss";
 import { useEffect, useState } from "react";
 
 export function JarvisAssistant() {
-  const { client, connected, connect } = useLiveAPIContext();
+  const { client, connected } = useLiveAPIContext();
   const [messages, setMessages] = useState<Message[]>([]);
 
   // Handle connection and welcome message
